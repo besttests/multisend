@@ -1,6 +1,6 @@
 chrome.extension.onMessage.addListener(
     function(message, sender, sendResponse){
-      for (var i=1; i<(message.length - 1);i++) {
+      for (var i=1; i<message.length;i++) {
         $('#send-tx-custom-form .add-recipient').click();
       }
 
