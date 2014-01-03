@@ -1,15 +1,15 @@
 { 
-   "name": "multisend",
-   "version": "1.2", 
+   "name": "peatio-alipay-tools",
+   "version": "0.1", 
    "manifest_version": 2,
-   "description": "load multi send by csv to blockchain.info",
-   "permissions": ["tabs", "https://blockchain.info/*"],
-   "browser_action": { 
-      "default_icon": "icon.png",
-      "default_popup": "popup.html"
-   },
+   "description": "",
+   "permissions": ["tabs", "https://alipay.com/*"],
+   "browser_action": { },
    "content_scripts": [{
-      "matches": ["https://blockchain.info/*"],
-      "js": ["jquery.js", "content.js"]
+      "matches": ["https://lab.alipay.com/consume/queryTradeDetail.htm?tradeNo=*"],
+      "js": ["jquery.js", "handlebars.js", "deposits.js"]
+   }, {
+      "matches": ["https://shenghuo.alipay.com/send/payment/fill.htm*"],
+      "js": ["jquery.js", "handlebars.js", "withdraw.js"]
    }]
 }
